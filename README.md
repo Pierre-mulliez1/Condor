@@ -1,4 +1,6 @@
 ### Hi there 👋
+Working on a special project called condor.
+A website that will work as a platform ✈ for all internal communication in the firm 📨: message, file sharing, project management, schedule, all in one !🍾
 
 <!--
 **Pierre-mulliez1/Pierre-mulliez1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
