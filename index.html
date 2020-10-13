@@ -1,47 +1,61 @@
 <head> 
-<link href="Condor.CSS" rel="stylesheet" >
+    <link href="Condor.CSS" rel="stylesheet" >
 </head>
 
 <body style = "background-color:#bccad6;"  style = "font-family: Arial, Helvetica, sans-serif;">
-<div class = "grid-container">
-<div class = "avatar" style="background-color: #bccad6" >
-<div class = "circle">
-    <p style = "font-size: 18px; text-align: center;">your <br> avatar</p>
-    </div>
-    </div>
-    <div class = "item1">
-<h5 > current directory; </h5> 
-</div>
-    <div class = "item2">
-        <div class= "container_menu">
-            <a >Home</a>
-            </div>
-            <div class= "container_menu">
-            <a >message hub</a>
-            </div>
-            <div class= "container_menu">
-             <a >schedule</a>
-            </div>
-            <div class= "container_menu">
-             <a >file sharing</a>
-            </div>
-    </div>
-    <div class = "item3" style = "padding-top:0px; padding-bottom: 0px; ">
-        <div class = "container_message" id="hub">
-    <p>message hub</p>
-            </div>
-    <input class = "conainer_wmessage" id="message" value="your message here" >
-    <button class="button_send" id="send" onclick="myFunctionsend();">Send</button>
-        
-        <script>
-function myFunctionsend() {
-     document.getElementById("hub").innerHTML = document.getElementById("message").innerHTML;
-      }
-</script>
-        
+    <div class = "grid-container" id="sugg">
+        <div class = "avatar" style="background-color: #bccad6; padding-top:0px;" >
+                <p class = "container_avatar" style = "font-size: 18px; text-align: center;">your <br> avatar</p>
+            <p class= "container_text"> Welcome MR/MS ...</p>
         </div>
-    <div class = "item5">
-        <p>foot</p>
+        
+        <div class = "item1">
+            <h5 id = "directory" class="container_directory"> current directory; </h5> 
+            <button class="button_directory" id="change" onclick="">Change directory 
+              </button>
+              
+           
+        </div>
+        
+        <div class = "item2">
+            <div class= "container_menu">
+                <a >Home</a>
+            </div>
+            <div class= "container_menu">
+                <a href ="message_hub.html">message hub</a>
+            </div>
+            <div class= "container_menu">
+                <a >schedule</a>
+            </div>
+            <div class= "container_menu">
+                <a >file sharing</a>
+            </div>
+            <div class= "container_menu">
+                <a >personal mode</a>
+            </div>
+        </div>
+
+        <div class = "item7"  style = "padding-top:0px; padding-bottom: 0px;">
+            <h5 class = "container_message_directory" >message quicklook</h5>
+            <button class="button_message_directory" id="expand2" onclick="Functionexpand2()">XX</button>
+        </div> 
+
+        <div class = "item3" style = "padding-top:0px; padding-bottom: 0px; ">
+            <div class = "container_message" id="hub">
+                <p>message hub</p>
+            </div>
+            <input class = "conainer_wmessage" id="message" value="your message here" >
+            <button class="button_send" id="send" onclick="myFunctionsend();">Send</button>
+        </div>
+        
+        <div class = "item4"  style = "padding-top:0px; padding-bottom: 0px;">
+            <h5 class = "container_directory" >Suggestions</h5>
+            <button class="button_directory" id="expand" onclick="Functionexpand()">XX</button>
+        </div>     
+
+        <div class = "item5">
+            <p>foot</p>
+        </div>
     </div>
-</div>
+    <script src="test.js"></script>
 </body>
