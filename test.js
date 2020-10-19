@@ -1,9 +1,13 @@
 var counter =0 ;
 var counter1 = 0;
+
 function myFunctionsend() {
-    document.querySelector("#hub").innerHTML = document.querySelector("#hub").innerHTML.replace(document.querySelector("#message").innerHTML);
-  /// node_value method ?
+    window.userInput = document.getElementById('message').value;
+    console.log(userInput);
+    document.querySelector("#hub").innerHTML = userInput;
 }
+
+
 
 function Functionexpand() {
     if (counter == 0)
@@ -33,5 +37,9 @@ function Functionexpand2() {
     counter1 = 0;
     }
 }
+function myPop() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
 
 
