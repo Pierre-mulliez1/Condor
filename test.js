@@ -4,7 +4,7 @@ var counter1 = 0;
 function myFunctionsend() {
     window.userInput = document.getElementById('message').value;
     console.log(userInput);
-    document.querySelector("#hub").innerHTML = userInput;
+    document.querySelector("#hub").innerHTML =  userInput;
 }
 
 
@@ -37,9 +37,6 @@ function Functionexpand2() {
     counter1 = 0;
     }
 }
-function myPop() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-  }
+
 
 

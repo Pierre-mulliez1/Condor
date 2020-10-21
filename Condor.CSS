@@ -6,7 +6,48 @@ HEX: #87bdd8
 
 HEX: #bbe4dc
  
-#acc3cf */
+#acc3cf 
+1E90FF*/
+div a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 15px;
+  display:inline-block;
+}
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ul li {display: inline-block;}
+ul li:hover {background:#b7d7e8;}
+ul li:hover ul {display: flex; }
+ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+ul li ul li { 
+  background: #1E90FF; 
+  display: block; 
+}
+ul li ul li a {display:block !important;} 
+ul li ul li ul li a {display:block !important;} 
+ul li ul li:hover {background:   #B0C4DE;  
+  border-bottom: solid; border-color: blue; border-width: 3px;}
+ul li ul li ul{ 
+  width: 100px;
+  visibility: hidden;
+  padding-left: 10%;
+}
+ul li ul li:hover ul{display: flex; visibility: visible;}
+
+  ul li ul li ul li{ 
+  background: #b7d7e8; 
+  display: block; 
+  
+}
 
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; 
@@ -305,6 +346,8 @@ font-display: arial;
 
 
 }
+
+
 
 
 

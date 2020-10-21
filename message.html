@@ -1,5 +1,5 @@
 <head> 
-<link href="Condor.CSS" rel="stylesheet" >
+    <link href="Condor.CSS" rel="stylesheet" >
 </head>
 
 <body style = "background-color:#bccad6;"  style = "font-family: Arial, Helvetica, sans-serif;">
@@ -8,21 +8,42 @@
                 <p class = "container_avatar" style = "font-size: 18px; text-align: center;">your <br> avatar</p>
             <p class= "container_text"> Welcome MR/MS ...</p>
         </div>
-        
         <div class = "item1">
             <h5 id = "directory" class="container_directory"> current directory; </h5> 
-            <button class="button_directory" id="change" onclick="">Change directory 
-              </button>
+              <div  class="button_directory">
+               
+                <ul>
+                  <li>
+                    <a href="#">Directory</a>
+                    <ul style="z-index: +1">
+                      <li><a href="#">Link 1</a>
+                        <ul>
+                            <li><a href="#">Link 1.1</a></li>
+                            <li><a href="#">Link 1.2</a></li>
+                          </ul>
+                      </li> 
+                      <li><a href="#">Link 2</a>
+                        <ul>
+                          <li><a href="#">Link 2.1</a></li>
+                        </ul>
+                      </li>
+                      
+                      <li><a href="#">Link 3</a></li>
+                      </ul>
+                    </li>
+                    </ul>
               
+              </div>
+              </div>
            
-        </div>
+       
         
         <div class = "item2">
-            <div class= "container_menu">
-                <a >Home</a>
-            </div>
-            <div class= "container_menu">
-                <a href ="message_hub.html">message hub</a>
+          <div class= "container_menu">
+            <a href ="index.html">home</a>
+        </div>
+          <div class= "container_menu">
+                <a >message hub</a>
             </div>
             <div class= "container_menu">
                 <a >schedule</a>
@@ -34,22 +55,25 @@
                 <a >personal mode</a>
             </div>
         </div>
-    <div class = "item7"  style = "padding-top:0px; padding-bottom: 0px;">
-        <h5 class = "container_message_directory" >Notifications</h5>
-        <button class="button_message_directory" id="expand2" onclick="Functionexpand2()">XX</button>
-    </div> 
 
-    <div class = "item3" style = "padding-top:0px; padding-bottom: 0px; ">
-        <p class = "container_input">Last input</p>
+        <div class = "item7"  style = "padding-top:0px; padding-bottom: 0px;">
+            <h5 class = "container_message_directory" >message quicklook</h5>
+            <button class="button_message_directory" id="expand2" onclick="Functionexpand2()">XX</button>
+        </div> 
 
-         </div>
-   <div class = "item4" style = "padding-top:0px; padding-bottom: 0px;">
-       <h5 class = "container_directory">Suggestions</h5>
-
-        <button class="button_directory" id="expand" onclick="">XX</button>
+        <div class = "item3" style = "padding-top:0px; padding-bottom: 0px; ">
+            <div class = "container_message" id="hub">
+                <p>message hub</p>
+            </div>
+            <input class = "conainer_wmessage" id="message" value="your message here" >
+            <button class="button_send" id="send" onclick="myFunctionsend();">Send</button>
+        </div>
+        
+        <div class = "item4"  style = "padding-top:0px; padding-bottom: 0px;">
+            <h5 class = "container_directory" >Suggestions</h5>
+            <button class="button_directory" id="expand" onclick="Functionexpand()">XX</button>
         </div>     
-       
-    
+
         <div class = "item5" style = "background-color: #acc3cf; padding: 8px;">
             <div class = "popup" onclick = "myPop0()">!Share!
                 <span class="popuptext" id="myPopup0">
@@ -93,5 +117,9 @@
                   }
                   </script>
                 </div>
-</div>
+               
+           
+        </div>
+    </div>
+    <script src="test.js"></script>
 </body>
