@@ -7,7 +7,22 @@ HEX: #87bdd8
 HEX: #bbe4dc
  
 #acc3cf 
-1E90FF*/
+1E90FF
+618685*/
+.body{
+  max-height: 99%;
+  max-width : 99%; 
+  background-color:#bccad6;
+  overflow: hidden;
+ 
+}
+
+.body a{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: none;
+}
+
 div a {
   text-decoration: none;
   color: black;
@@ -22,7 +37,7 @@ ul {
 }
 ul li {display: inline-block;}
 ul li:hover {background:#b7d7e8;}
-ul li:hover ul {display: flex; }
+ul li:hover ul {display: block; }
 ul li ul {
   position: absolute;
   width: 200px;
@@ -35,13 +50,16 @@ ul li ul li {
 ul li ul li a {display:block !important;} 
 ul li ul li ul li a {display:block !important;} 
 ul li ul li:hover {background:   #B0C4DE;  
-  border-bottom: solid; border-color: blue; border-width: 3px;}
+                  border-right: solid;
+                  border-color: blue; 
+                  border-width: 3px;}
 ul li ul li ul{ 
-  width: 100px;
+  width: 125px;
   visibility: hidden;
   padding-left: 10%;
+  left: 70%;
 }
-ul li ul li:hover ul{display: flex; visibility: visible;}
+ul li ul li:hover ul{display: inline-block; visibility: visible;}
 
   ul li ul li ul li{ 
   background: #b7d7e8; 
@@ -65,7 +83,7 @@ ul li ul li:hover ul{display: flex; visibility: visible;}
 
 .grid-container {
   display: grid;
-grid-template-rows: 20% 10% 110% 10%;
+grid-template-rows: 100px 70px 460px 70px;
 grid-template-columns: 15% 10% 10% 27% 10% 10% 15%;
   grid-template-areas:
     'avatar header header header header header header'
@@ -77,25 +95,47 @@ grid-template-columns: 15% 10% 10% 27% 10% 10% 15%;
 align-items: stretch;
 } 
 
+.box_avatar{
+  width:12%;
+  height: 90%;
+  float: left;
+  margin-left: 1%;
+}
+
+.container_avatar2{
+  float: left;
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  margin: 0%;
+  background-color: #1E90FF;
+}
+
 .container_avatar{
   float: left;
   width: 50%;
   border-radius: 50%;
-  background-color:#87bdd8;
   height: 100%;
+  margin: 0%;
+  background-image: url("img/harry.jpg");
+  background-size: cover; 
 }
 
-.container_avatar:hover{
-background-color: #cfe0e8;
-display: "log out";
-font-display: arial;
+
+
+.container_avatar p{
+  visibility: hidden;
+  opacity: 0.7;
+  padding: 31%;
+  margin: 0%;
+  border-radius: 50%;
+  background-color: white;
+  text-align: top;
+  
 }
 
-.container_text{
-  float: right;
-  width: 40%;
-  padding-left: 10%;
-  font-size: 18px;
+.container_avatar:hover p{
+  visibility: visible;
 }
 
 
@@ -106,10 +146,6 @@ font-display: arial;
   padding: 20px 0;
   font-size: 30px;
 }
-
-
-
-
 
 .container_message{
     height : 80%;
@@ -139,6 +175,8 @@ font-display: arial;
     height:20%;
     position:relative;
     cursor: pointer;
+    min-width: 35px; 
+    min-height: 25px;
 }
 
 .button_send:hover{
@@ -168,6 +206,7 @@ font-display: arial;
   position:relative;
   height: 100%;
   cursor: pointer;
+  
 }
 .button_message_directory:hover{
   background-color: #b7d7e8;
@@ -178,19 +217,106 @@ font-display: arial;
   Height: 15%;
   font-size: 25px;
   font-weight: bold;
-  padding-top: 0px;
-  margin-top: 0px;
+  padding: 0%;
+  margin: 0%;
 }
+
+.container_live_input{
+  height: 10%;
+  background-color: #b7d7e8;
+  width: 100%;
+  display: inline-block;
+  margin-top: 0.5%;
+}
+
+.container_live_input p{
+  text-align: left;
+  font-size: 18px;
+}
+
 .container_directory{
     width: 85%;
     float: right;
     text-align: 25%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+    max-width: 100%;
 }
 
+.container_title{
+  max-height: 10%; 
+  padding-top: 4%;
+  margin-top: 0%; 
+  margin-bottom: 5%;
+}
+
+.container_title h5{
+  padding-top: 0%;
+  font-size: 18px; 
+  margin-top: 0%; 
+  font-weight: bold;
+}
+
+.container_indiv_sugg{
+  background-color: #618685;
+  height: 15%;
+  width: 95%;
+  border: #555;
+  border-style: solid;
+  border-width: 2px;
+  margin-bottom: 1%;
+  cursor: pointer;
+  -webkit-animation: fadeIn 2s;
+  animation: fadeIn 2s;
+}
+
+.container_indiv_sugg a{
+  font-size: 15px;
+}
+
+.container_indiv_sugg:hover{
+  background-color: #87bdd8;
+}
+
+.container_indiv_notif{
+  background-color: #c5d5c5;
+  height: 15%;
+  width: 95%;
+  border: #555;
+  border-style: solid;
+  border-width: 2px;
+  margin-bottom: 1%;
+  cursor: pointer;
+  -webkit-animation: fadeIn 2s;
+  animation: fadeIn 2s;
+}
+
+.container_indiv_notif a{
+  font-size: 15px;
+}
+
+.container_indiv_notif:hover{
+  background-color: #87bdd8;
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
 .container_message_directory{
   width: 85%;
   float: left;
   text-align: 25%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .container_menu{
@@ -239,16 +365,13 @@ font-display: arial;
   -ms-user-select: none;
   user-select: none;
   float: left;
-  padding: 8px 18px;
+  padding: 0px 18px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.popup:hover{
-  background-color: #bbe4dc
-}
 
-/* The actual popup */
+/* The actual popup _ used in footer*/
 .popup .popuptext {
   visibility: hidden;
   width: 100px;
@@ -264,12 +387,47 @@ font-display: arial;
   margin-left: -80px;
 }
 
+/* menu pop up*/
+.popup .popuptext_logs {
+  visibility: hidden;
+  display: block;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+  left: 80%;
+  margin-left: -80px; 
+}
+
+.popup button{
+  margin: 15px;
+  position: inherit;
+  width: 100%; 
+  height: 25%;
+  min-width: 20px;
+  min-height: 20px;
+  background-color:#87bdd8;
+  margin-right: 10%;
+  -ms-transform: translateX(-5%);
+  transform: translateX(-5%);
+}
+
+.popup button:hover{
+  background-color: #b7d7e8;
+}
+
 /* Toggle this class - hide and show the popup */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
+
+
+
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
@@ -299,18 +457,25 @@ font-display: arial;
   background-color: #b7d7e8;
 }
 
-
+/* smaller screen setup*/
 @media (max-width:700px){
   .grid-container{
-    grid-template-rows: 15% 10% 15% 70% 10%;
+    grid-template-rows: 40px 30px 50px 200px 40px;
     grid-template-areas:
     'avatar avatar header header header header header'
     'menu menu menu menu menu menu menu'
     'left left left left left left left'
     'main main main main main right right'
     'footer footer footer footer footer footer footer';
+    grid-gap: 12px;
   }
 
+  .container_avatar p{
+    font-size: 10px;
+  }
+  .body a{
+    font-size: 14px;
+  }
   .container_menu a{
     padding: 10px 12px;
     font-size: 15px;
@@ -333,16 +498,47 @@ font-display: arial;
 
 .container_directory{
   width: 75%;
-  font-size: 16px;;
+  height: 100%;
+  padding-top: 0%;
+  margin-top: 0%;
 }
 
 .button_directory{
   width: 25%;
-  font-weight: bold;
-  font-size: 15px;
-
+  height: 100%;
 }
 
+.button_directory a{
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 0%;
+}
+
+.container_text{
+  font-size: 14px;
+}
+
+.container_indiv_notif{
+  background-color: #c5d5c5;
+  height: 25px;
+  width: 99%;
+  border: #555;
+  border-style: solid;
+  border-width: 2px;
+  margin-bottom: 1%;
+  cursor: pointer;
+  -webkit-animation: fadeIn 2s;
+  animation: fadeIn 2s;
+}
+
+.container_indiv_notif a{
+  font-size: 13px;
+  padding-top: 0%;
+}
+
+.container_indiv_notif:hover{
+  background-color: #87bdd8;
+}
 
 
 }

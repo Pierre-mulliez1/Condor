@@ -2,36 +2,60 @@
 <link href="Condor.CSS" rel="stylesheet" >
 </head>
 
-<body style = "background-color:#bccad6;"  style = "font-family: Arial, Helvetica, sans-serif;">
+<body class = "body">
     <div class = "grid-container" id="sugg">
-        <div class = "avatar" style="background-color: #bccad6; padding-top:0px;" >
-                <p class = "container_avatar" style = "font-size: 18px; text-align: center;">your <br> avatar</p>
-            <p class= "container_text"> Welcome MR/MS ...</p>
-        </div>
+        <div class = "avatar" style="background-color: #bccad6; padding-top:0px; padding-bottom: 0%;">
+                <div class = "container_avatar" id = "photo_avatar">
+                    <div class = "container_avatar2" id="backgroundc">
+                        <div class= "atext" id= "text_avatar">
+                            <p id = "user_name">Pierre</p>
+                        </div>
+                   </div> 
+                </div>
+                <button class ="button_send" style = "width: 44%; height: 50%; margin: 3%; margin-top: 10%;" onclick="myPop00();">
+                    <p id = "textlog">log in</p>
+                </button>
+                <div class = "popup" id="windowpop">
+                    <span class="popuptext_logs" id="myPopup00">
+                        <form action="" method="">
+                            <h5>Your username:</h5> <input type="text" name = "IA_name">
+                            <h5>Your password:</h5> <input type="text" id= "IA_process">
+                         </form>
+                         <button onclick="loginout()">Sign in</button>
+                         <button onclick="closeWin('windowpop')">cancel </button>
+                    </span>
+                    <script>function myPop00() {
+                        var popup = document.getElementById("myPopup00");
+                        popup.classList.toggle("show");
+                      }
+                      </script>
+                    </div>
+                
+                
+    </div>
         
         <div class = "item1">
             <h5 id = "directory" class="container_directory"> current directory; </h5> 
             <div class="button_directory"  >
-            <ul>
-                <li>
-                  <a href="#">Directory</a>
-                  <ul style="z-index: +1">
-                    <li><a href="#">Link 1</a>
-                      <ul>
-                          <li><a href="#">Link 1.1</a></li>
-                          <li><a href="#">Link 1.2</a></li>
+                <ul>
+                    <li>
+                      <a href="#">Directory</a>
+                      <ul style="z-index: +1">
+                        <li><a href="#">Personnel</a>
+                          <ul>
+                              <li><a href="#">admin</a></li>
+                              <li><a href="#">guest</a></li>
+                            </ul>
+                        </li> 
+                        <li><a href="#">marketing</a>
+                          <ul>
+                            <li><a href="#">semester 1</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Finances</a></li>
                         </ul>
-                    </li> 
-                    <li><a href="#">Link 2</a>
-                      <ul>
-                        <li><a href="#">Link 2.1</a></li>
+                      </li>
                       </ul>
-                    </li>
-                    
-                    <li><a href="#">Link 3</a></li>
-                    </ul>
-                  </li>
-                  </ul>
                 </div>
               
            
@@ -39,7 +63,7 @@
         
         <div class = "item2">
             <div class= "container_menu">
-                <a href = "index.html">Home</a>
+                <a href="index.html"><div  class="image"><img width="50" height="55" src="img/infinity_logo.png" alt="bla" ></div></a>
             </div>
             <div class= "container_menu">
                 <a href ="message.html">message hub</a>
@@ -50,23 +74,76 @@
             <div class= "container_menu">
                 <a >file sharing</a>
             </div>
-            <div class= "container_menu">
-                <a >personal mode</a>
-            </div>
+            
         </div>
     <div class = "item7"  style = "padding-top:0px; padding-bottom: 0px;">
-        <h5 class = "container_message_directory" >Notifications</h5>
+        <div class = "container_message_directory" >
+            <div class = "container_title">
+            <h5 >Notification</h5>
+        </div>
+            <div class = "container_indiv_notif" >
+                <a id = "" >This is the first notification</a>
+            </div>
+            <div class = "container_indiv_notif" >
+                <a id = "" >This is the second notification</a>
+            </div>
+            <div class = "container_indiv_notif" >
+                <a id = "" >This is the third notification</a>
+            </div>
+            <div class = "container_indiv_notif" >
+                <a id = "" >This is the fourth notification</a>
+            </div>
+            <div class = "container_indiv_notif" >
+                <a id = "" >This is the fith notification</a>
+            </div>
+            <div class = "container_indiv_notif" >
+                <a id = "" >This is the sixth notification</a>
+            </div>
+        </div>
         <button class="button_message_directory" id="expand2" onclick="Functionexpand2()">XX</button>
     </div> 
 
     <div class = "item3" style = "padding-top:0px; padding-bottom: 0px; ">
         <p class = "container_input">Last input</p>
+        <div class = "container_live_input">
+            <div class = "box_avatar">
+                <div class = "container_avatar" id = "photo_avatar">
+                    <div class = "container_avatar2" id="backgroundc2">
+                    </div>
+                </div>
+            </div>
+            <p>Pierre wrote: I love pizza</p>
+        </div>
+    </div>
 
-         </div>
-   <div class = "item4" style = "padding-top:0px; padding-bottom: 0px;">
-       <h5 class = "container_directory">Suggestions</h5>
 
-        <button class="button_directory" id="expand" onclick="">XX</button>
+         <!--Suggestion button -->
+         <div class = "item4"  style = "padding-top:0px; padding-bottom: 0px;">
+            <div class = "container_directory" >
+                <div class = "container_title">
+                <h5>suggestion</h5>
+                </div>
+                <div class = "container_indiv_sugg">
+            <a id = "" >This is the first suggestion</a>
+        </div>
+        <div class = "container_indiv_sugg">
+            <a id = "" >This is the second suggestion</a>
+        </div>
+                <!-- keep -> test for database connection
+                <form method="POST" name= "IA" action="register">
+                   IA Name <input type = "text" name = IA_name/> 
+                   IA process <input type = "text" name = IA_process/> 
+                   <br>
+                   
+                  
+                </form>
+         
+                <input type = "submit" >
+                Suggestions</h5>
+                   -->
+                </div>
+            <button class="button_directory" id="expand" onclick="Functionexpand()">XX</button>
+           
         </div>     
        
     
@@ -114,4 +191,6 @@
                   </script>
                 </div>
 </div>
+<script src="test.js"></script>
+
 </body>
